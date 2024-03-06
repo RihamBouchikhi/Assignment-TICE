@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+
+
+            /* Définissez la propriété background-image pour spécifier l'image */
+            background-image: url('img/Sky.jpeg');
+            /* Définissez la taille du fond d'écran (optionnel) */
+            background-size: cover;
+            /* Définissez la répétition du fond d'écran (optionnel) */
+            background-repeat: no-repeat;
+            /* Centrez l'image sur l'écran (optionnel) */
+            background-position: center;
+            /* Couleur de fond de secours au cas où l'image ne se chargerait pas ou serait transparente */
+            background-color: #f0f0f0;
+        }
+        .TH{
+            font-size: larger !important;
+            font-weight: 700;
+            color: rgba(4, 0, 255, 0.493);
+        }
+        .video{
+            border:black, solid, 5px !important;
+        }
+        .titre{
+            margin: 40px;
+            color: #b70808;
+
+        }
+        .t2{
+            margin: 40px;
+            margin-bottom: 50px;
+
+        }
+        #question-image {
+            max-width: 20%;
+            height: 20% !important;
+            margin: 30px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .option {
+            margin: 0 10px;
+            cursor: pointer;
+            padding: 10px 30px;
+            border: 1px solid #ccc;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        .option:hover{
+            background-color: rgba(4, 0, 255, 0.493);
+            color: aliceblue;
+        }
+        .ft{
+            margin-top: 30px;
+        }
+        Span{
+            color: #b70808
+        }
+    </style>
+    <title>TP1-Riham&Asmae</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">
+            <img src="img/logo_B.gif" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Université Mohammed 5 'FSE'
+          </a>
+          <h4 class="TH">TIC dans l'Enseignement </h4>
+        </div>
+    </nav>
+    <h2 class="titre">La modalité N°1 : Vidéo et le questionnaire en ligne:</h2>
+    <h3 class="t2">Appuyez sur play et laissez l'aventure commencer ! 🚀:</h3>
+    <video class="video" width="640" height="360" controls>
+        <!-- Ajoutez la source de la vidéo avec l'attribut src -->
+        <source src="Ma-vidéo-1.mp4" type="video/mp4">
+        <!-- Vous pouvez également ajouter des sources supplémentaires pour prendre en charge différents formats de vidéo -->
+        <!-- <source src="chemin/vers/votre/video.webm" type="video/webm"> -->
+        <!-- <source src="chemin/vers/votre/video.ogv" type="video/ogg"> -->
+        
+        <!-- Fournissez un message de secours pour les navigateurs qui ne prennent pas en charge la balise vidéo -->
+        Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+    <h3 class="t2">À vos marques, prêts, répondez ! 🌟</h3>
+
+    <h4><Span>Question N°1 :</Span> Le chat 🐱 est .... la table .  </h4>
+    <img id="question-image" src="img/sur.jpeg" alt="Question Image">
+
+    <div class="options">
+        <div class="option" onclick="checkAnswer(1)">Sur  </div>
+        <div class="option" onclick="checkAnswer(2)">Dans</div>
+        <div class="option" onclick="checkAnswer(3)">Devant</div>
+    </div>
+
+    <h4 class="t2" ><Span>Question N°2 :</Span> Le chat 🐱 est .... la boite .  </h4>
+    <img id="question-image" src="img/devant.jpeg" alt="Question Image">
+
+    <div class="options">
+        <div class="option" onclick="checkAnswer(1)">Devant  </div>
+        <div class="option" onclick="checkAnswer(2)">Dans</div>
+        <div class="option" onclick="checkAnswer(3)">A coté</div>
+    </div>
+
+    <h4 class="t2" ><Span>Question N°3 :</Span> Le chat 🐱 est .... la table .  </h4>
+    <img id="question-image" src="img/sous.jpeg" alt="Question Image">
+
+    <div class="options">
+        <div class="option" onclick="checkAnswer(1)">Sous </div>
+        <div class="option" onclick="checkAnswer(2)">Arrière</div>
+        <div class="option" onclick="checkAnswer(3)">Dans</div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start ft">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-dark" href="">Riham Bouchikhi & Asmae Zouhri</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script>
+        function checkAnswer(selectedOption) {
+            // Replace 1 with the correct answer option
+            var correctAnswer = 1;
+
+            if (selectedOption === correctAnswer) {
+                showAlert("Bonne réponse!", "img/oui.jpeg"); // Affiche une fenêtre modale avec l'image "bravo.jpg"
+            } else {
+                showAlert("Mauvaise réponse. Essayez encore.", "img/non.jpeg"); // Affiche une fenêtre modale avec l'image "no.jpg"
+            }
+        }
+
+        function showAlert(message, image) {
+            var modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+
+            var content = document.createElement('div');
+            content.style.backgroundColor = '#fff';
+            content.style.padding = '20px';
+            content.style.borderRadius = '5px';
+            content.style.textAlign = 'center';
+
+            var text = document.createElement('p');
+            text.textContent = message;
+            content.appendChild(text);
+
+            var img = document.createElement('img');
+            img.src = image;
+            img.alt = 'Image';
+            img.style.maxWidth = '30%';
+            img.style.height = 'auto';
+            content.appendChild(img);
+
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+
+            // Ferme la fenêtre modale après 3 secondes
+            setTimeout(function () {
+                document.body.removeChild(modal);
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
